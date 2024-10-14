@@ -5,12 +5,12 @@ import Pricing from './views/Pricing.vue';
 
 const routes = [
     {
-        path: '/',
+        path: 'portobellodrivertraining/',
         name: 'Home',
         component: Home,
     },
     {
-        path: '/pricing',
+        path: 'portobellodrivertraining/pricing',
         name: 'Pricing',
         component: Pricing,
     },
