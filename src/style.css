@@ -22,5 +22,11 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  width:500%;
+  width:100%;
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
 }

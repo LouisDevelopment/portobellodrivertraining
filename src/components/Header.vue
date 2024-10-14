@@ -59,6 +59,7 @@ export default {
     z-index: 1000;
   }
   .header-button{
+    font-size:20px;
     color: var(--p-surface-200);
     padding:0.7rem 1rem;
     border-radius: 0px;
@@ -73,6 +74,6 @@ export default {
   }
   .right{
     display:flex;
-    margin: 0 1.2rem 0 0;
+    margin: 0 24px 0 0;
   }
 </style>

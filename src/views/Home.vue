@@ -59,6 +59,17 @@ export default {
   flex-direction: row;
 }
 .info-panel{
+
   margin:0 16px;
+}
+@media (max-width: 900px) {
+  .inline {
+    flex-direction: column;
+    min-width: unset; /* Remove the minimum width when stacked */
+  }
+
+  .info-panel{
+    margin:16px 16px;
+  }
 }
 </style>
