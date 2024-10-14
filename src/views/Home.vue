@@ -59,7 +59,8 @@ export default {
   flex-direction: row;
 }
 .info-panel{
-
+  background-color: var(--p-surface-300);
+  color: var(--p-surface-700);
   margin:0 16px;
 }
 @media (max-width: 900px) {
