@@ -1,6 +1,6 @@
 <template>
   <h1>Portobello Driver Training</h1>
-  <h2>Professional and affordable driving lessons in Edinburgh</h2>
+  <h2>Professional and affordable manual driving lessons in Edinburgh</h2>
 </template>
 
 <script>
