@@ -8,6 +8,7 @@ import { definePreset } from '@primevue/themes';
 import Button from "primevue/button";
 import Menubar from "primevue/menubar";
 import ToggleSwitch from 'primevue/toggleswitch';
+import Card from 'primevue/card';
 
 const portobello = definePreset(Aura, {
     semantic: {
@@ -79,6 +80,7 @@ app.use(PrimeVue, {
     }
 })
 app.component('Button', Button);
+app.component('Card', Card);
 app.component('Menubar', Menubar);
 app.component('ToggleSwitch', ToggleSwitch);
 app.mount('#app');
