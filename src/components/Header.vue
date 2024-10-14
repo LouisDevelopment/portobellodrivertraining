@@ -19,7 +19,7 @@ export default {
       items: [
         {
           label: 'Pricing',
-          icon: 'fa-solid fa-sterling-sign',
+          icon: 'fa-solid fa-dollar-sign',
           command: () => {
             this.$router.push("/pricing");
           }
