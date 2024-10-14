@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master  # Change this to the branch your client will use to make updates
+      -
+permissions:
+  contents: write  # Allow write access to repository contents
 
 jobs:
   deploy:
