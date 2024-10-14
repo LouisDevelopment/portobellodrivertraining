@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="splashpage">
-      <h1>Portobello Driver Training</h1>
+      <img class='logo' aria-label="portobello driver training logo" src="../assets/PortobelloDriverTraining.png"/>
       <h2>Professional and affordable driving lessons in Edinburgh</h2>
     </div>
     <div class="content">
@@ -38,6 +38,11 @@ export default {
 .home{
   display:flex;
   flex-direction: column;
+}
+
+.logo{
+  width:30%;
+  height:auto;
 }
 
 .splashpage{

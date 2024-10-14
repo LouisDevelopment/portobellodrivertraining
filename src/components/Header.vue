@@ -1,6 +1,7 @@
 <template>
 <div class="header">
   <div class="left">
+    <img @click="this.$router.push({name: 'Home'});" class="logo" src="../assets/PortobelloDriverTrainingMini.svg"/>
     <Button class="header-button" text :label="items[0].label" @click="items[0].command"/>
     <Button class="header-button" text :label="items[1].label" @click="items[1].command"/>
   </div>
@@ -21,7 +22,7 @@ export default {
           label: 'Pricing',
           icon: 'fa-solid fa-dollar-sign',
           command: () => {
-            this.$router.push("/pricing");
+            this.$router.push({name: 'Pricing'});
           }
         },
         {
@@ -58,6 +59,14 @@ export default {
     box-shadow:0 0 6px 0 var(--p-surface-500);
     z-index: 1000;
   }
+  .logo{
+    width:3rem;
+    padding:0 0.3rem;
+    height:auto;
+  }
+  .logo:hover{
+    cursor:pointer;
+  }
   .header-button{
     font-size:20px;
     color: var(--p-surface-200);
@@ -66,7 +75,7 @@ export default {
   }
   .header-button:hover{
     color: var(--p-surface-200);
-    background-color: var(--p-surface-700);
+    background-color: var(--p-surface-100);
   }
 
   .left{
