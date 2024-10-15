@@ -17,16 +17,38 @@
     </div>
     <div class="inline">
       <div class="feature">
-        <img draggable="false" class="featured-img" src="../assets/DVSA%20instructor.png"/>
-        <h1>Fully Certified Instruction</h1>
-        <p>As an approveed driving instructor of over 20 years, with hundreds of passed pupils, you can be certain you're in good hands</p>
+        <img draggable="false" class="featured-img default-img" src="../assets/DVSA%20instructor.png"/>
+        <div class="feature-right">
+          <h1>Fully Certified Instruction</h1>
+          <p>As an approved driving instructor of over X years, with hundreds of passed pupils, you can be certain you're in good hands.</p>
+        </div>
 
       </div>
-      <Card class="feature">
-        <template #content>
-          <img draggable="false" class="featured-img" src="../assets/DVSA%20instructor.png"/>
-        </template>
-      </Card>
+      <div class="feature">
+        <img draggable="false" class="featured-img custom-img" src="../assets/Gearbox.png"/>
+        <div class="feature-right">
+          <h1>Manual Lessons</h1>
+          <p>With Portobello Driver Training you'll be driving a manual car, picking up all the skills
+            required to pass the UK driving test and get a complete Manual and Automatic car licence.</p>
+        </div>
+
+      </div>
+      <div class="feature">
+        <img draggable="false" class="featured-img custom-img" src="../assets/currency.png"/>
+        <div class="feature-right">
+          <h1>Competitive Pricing</h1>
+          <p>With 90 minute lessons costing £65 (£43 per hour), Portobello Driver Training is priced below the average for the Edinburgh Area.</p>
+        </div>
+
+      </div>
+      <div class="feature">
+        <img draggable="false" class="featured-img custom-img" src="../assets/kindness.png"/>
+        <div class="feature-right">
+          <h1>Friendly & Patient</h1>
+          <p>No one wants to be treated unfairly, especially when driving. Portobello Driver Training will treat you with the respect and patience that you deserve.</p>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -76,16 +98,23 @@ export default {
   padding:0px;
 }
 
+.custom-img{
+  height:7.3rem;
+  margin-top:0.7rem;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 2px white;
+}
+
+.default-img{
+  height:8rem;
+}
+
 .feature{
   display:flex;
   flex-direction: column;
   align-items: center;
   width:20%;
   margin: 0 4%;
-}
-
-.featured-img{
-  width:10rem;
 }
 
 .logo{
@@ -152,8 +181,17 @@ h1{
 }
 @media (max-width: 1000px) {
   .inline {
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     min-width: unset; /* Remove the minimum width when stacked */
+  }
+
+  .feature{
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    flex-direction: row;
   }
 
   logo-text{
