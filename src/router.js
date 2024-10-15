@@ -5,12 +5,12 @@ import Pricing from './views/Pricing.vue';
 
 const routes = [
     {
-        path: '/portobellodrivertraining/',
+        path: '/',
         name: 'Home',
         component: Home,
     },
     {
-        path: '/portobellodrivertraining/pricing',
+        path: '/pricing',
         name: 'Pricing',
         component: Pricing,
     },
@@ -18,7 +18,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHashHistory(), // Change this to use hash history
+    history: createWebHashHistory("/portobellodrivertraining/"), // Change this to use hash history
     routes,
 });
 
