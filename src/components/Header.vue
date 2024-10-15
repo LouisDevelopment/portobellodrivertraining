@@ -2,7 +2,8 @@
 <div class="header">
   <div class="left">
     <img @click="this.$router.push({name: 'Home'});" class="logo" src="../assets/PortobelloDriverTrainingMini.svg"/>
-    <Button class="header-button" text :label="items[0].label" @click="items[0].command"/>
+    <Button
+        class="header-button" text :label="items[0].label" @click="items[0].command"/>
     <Button class="header-button" text :label="items[1].label" @click="items[1].command"/>
   </div>
   <div class="right">
@@ -35,10 +36,20 @@ export default {
       ]
     }
   },
-  watch:{
-    checked: function(){
-      document.documentElement.classList.toggle('dark-mode');
+  watch: {
+    checked: function() {
+      if (this.checked) {
+        document.documentElement.classList.add('dark-mode'); // Add dark mode class
+      } else {
+        document.documentElement.classList.remove('dark-mode'); // Remove dark mode class
+      }
+      localStorage.setItem('dark', this.checked); // Save preference
     }
+  },
+  mounted() {
+    const savedTheme = localStorage.getItem('dark');
+    // Convert the saved string back to a boolean
+    this.checked = savedTheme === 'true'; // Set `checked` to true or false based on stored value
   }
 }
 </script>

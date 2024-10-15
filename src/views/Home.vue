@@ -50,6 +50,7 @@ export default {
 
 .logo{
   width:15rem;
+  margin-top:20vh;
   background-color: var(--p-card-background);
   border-radius: 50% 50% 0 0;
   height:auto;
@@ -71,7 +72,7 @@ export default {
   height:67vh;
   object-fit:cover;
   filter: saturate(20%);
-  box-shadow: 0 0 10px 0 var(--p-surface-800);
+  box-shadow: 0 0 10px 0 black;
   z-index: -1;
 }
 
@@ -81,7 +82,7 @@ export default {
   align-items: center;
   flex-direction: column;
   width:100%;
-  height:100vh;
+  height:70vh;
   margin:0px;
   padding:0px;
 }
@@ -96,8 +97,6 @@ export default {
   flex-direction: row;
 }
 .info-panel{
-  background-color: var(--p-surface-300);
-  color: var(--p-surface-700);
   margin:0 16px;
 }
 @media (max-width: 900px) {
