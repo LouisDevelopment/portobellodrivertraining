@@ -12,6 +12,7 @@
 
 body {
   margin: 0;
+  padding:0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -19,8 +20,8 @@ body {
 }
 
 #app {
-  margin: 0 auto;
-  padding: 2rem;
+  margin-top:6vh;
+  padding:0;
   text-align: center;
   width:100%;
 }

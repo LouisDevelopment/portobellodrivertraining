@@ -1,7 +1,8 @@
 <template>
 <div class="header">
   <div class="left">
-    <img @click="this.$router.push({name: 'Home'});" class="logo" src="../assets/PortobelloDriverTrainingMini.svg"/>
+    <img @mouseover="logo=logoHover"
+         @mouseleave="logo=defaultLogo"  @click="this.$router.push({name: 'Home'});" class="logo" :src="logo"/>
     <Button
         class="header-button" text :label="items[0].label" @click="items[0].command"/>
     <Button class="header-button" text :label="items[1].label" @click="items[1].command"/>
@@ -13,11 +14,17 @@
 </template>
 
 <script>
+
+import logoDefault from '../assets/PortobelloDriverTrainingWhite.svg';
+import logoHovered from '../assets/PortobelloDriverTrainingMini.svg';
 export default {
   name: "Header",
   data() {
     return {
       checked: false,
+      logo: logoDefault,
+      defaultLogo: logoDefault,
+      logoHover: logoHovered,
       items: [
         {
           label: 'Pricing',
@@ -43,11 +50,13 @@ export default {
       } else {
         document.documentElement.classList.remove('dark-mode'); // Remove dark mode class
       }
+      this.$emit('darkMode', this.checked)
       localStorage.setItem('dark', this.checked); // Save preference
     }
   },
   mounted() {
     const savedTheme = localStorage.getItem('dark');
+    this.$emit('darkMode', savedTheme);
     // Convert the saved string back to a boolean
     this.checked = savedTheme === 'true'; // Set `checked` to true or false based on stored value
   }
@@ -57,17 +66,18 @@ export default {
 <style scoped>
   .header{
     background-color: var(--p-surface-500);
-    width: 101%;
-    min-width: 101%;
+    width: 100%;
+    height: 6vh;
+    min-width: 100%;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    top: -1px;
-    left: -1px;
+    top: 0;
+    left: 0;
     padding:0px;
     border-radius: 0px;
-    box-shadow:0 0 6px 0 var(--p-surface-500);
+    box-shadow:0 0 2px 0 var(--p-surface-500);
     z-index: 1000;
   }
   .logo{
@@ -76,12 +86,13 @@ export default {
     height:auto;
   }
   .logo:hover{
+    background-color: var(--p-button-text-primary-hover-background);
     cursor:pointer;
   }
   .header-button{
     font-size:20px;
     color: var(--p-surface-200);
-    padding:0.7rem 1rem;
+    height:6vh;
     border-radius: 0px;
   }
   .header-button:hover{

@@ -1,6 +1,6 @@
 <template>
-  <Header/>
-  <router-view/>
+  <Header @darkMode="setDark"/>
+  <router-view :darkMode="dark"/>
 </template>
 
 <script>
@@ -13,6 +13,16 @@ export default {
     Header,
     Footer
   },
+  data(){
+    return{
+      dark: false
+    }
+  },
+  methods: {
+    setDark: function(dark){
+      this.dark = dark
+    }
+  }
 }
 </script>
 

@@ -57,29 +57,45 @@ const portobello = definePreset(Aura, {
             900: '{sky.900}',
             950: '{sky.950}'
         },
-
-        surface: {
-            0: '#ffffff',
-            50: '{slate.50}',
-            100: '{slate.100}',
-            200: '{slate.200}',
-            300: '{slate.300}',
-            400: '{slate.400}',
-            500: '{slate.500}',
-            600: '{slate.600}',
-            700: '{slate.700}',
-            800: '{slate.800}',
-            900: '{slate.900}',
-            950: '{slate.950}'
-        },
         colorScheme: {
             light: {
                 background: '{sky.200}',
+                backgroundAlt: '{sky.300}',
+                vibrance: '100%',
+                surface: {
+                    0: '#ffffff',
+                    50: '{slate.50}',
+                    100: '{slate.100}',
+                    200: '{slate.200}',
+                    300: '{slate.300}',
+                    400: '{slate.400}',
+                    500: '{slate.500}',
+                    600: '{slate.600}',
+                    700: '{slate.700}',
+                    800: '{slate.800}',
+                    900: '{slate.900}',
+                    950: '{slate.950}'
+                },
 
             },
             dark: {
                 background: '{slate.700}',
-
+                backgroundAlt: '{slate.900}',
+                vibrance: '40%',
+                surface: {
+                    0: '#ffffff',
+                    50: '{slate.50}',
+                    100: '{slate.100}',
+                    200: '{slate.200}',
+                    300: '{slate.300}',
+                    400: '{slate.400}',
+                    500: '{slate.500}',
+                    600: '{slate.600}',
+                    700: '{slate.700}',
+                    800: '{slate.800}',
+                    900: '{slate.900}',
+                    950: '{slate.950}'
+                },
             }
         }
     }
