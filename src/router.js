@@ -1,5 +1,5 @@
 // src/router.js
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router'; // Use createWebHashHistory instead
 import Home from './views/Home.vue';
 import Pricing from './views/Pricing.vue';
 
@@ -18,7 +18,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(), // Change this to use hash history
     routes,
 });
 
