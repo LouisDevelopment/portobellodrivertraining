@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
   .header{
-    background-color: var(--p-surface-500);
+    background-color: var(--p-header);
     width: 100%;
     height: 6vh;
     min-width: 100%;
@@ -77,7 +77,7 @@ export default {
     left: 0;
     padding:0px;
     border-radius: 0px;
-    box-shadow:0 0 2px 0 var(--p-surface-500);
+    box-shadow:0 0 2px 0 var(--p-header);
     z-index: 1000;
   }
   .logo{

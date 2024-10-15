@@ -15,22 +15,23 @@
         <img draggable="false" class="background-img" src="../assets/SplashImage1.png"/>
       </div>
     </div>
-  </div>
-
-
-  <div class="inline">
-    <div class="feature">
-      <img draggable="false" class="featured-img" src="../assets/DVSA%20instructor.png"/>
-      <h1>Fully Certified Instruction</h1>
-      <p>As a driving instructor of over 20 years, you can be certain you're in good hands</p>
-
-    </div>
-    <Card class="feature">
-      <template #content>
+    <div class="inline">
+      <div class="feature">
         <img draggable="false" class="featured-img" src="../assets/DVSA%20instructor.png"/>
-      </template>
-    </Card>
+        <h1>Fully Certified Instruction</h1>
+        <p>As an approveed driving instructor of over 20 years, with hundreds of passed pupils, you can be certain you're in good hands</p>
+
+      </div>
+      <Card class="feature">
+        <template #content>
+          <img draggable="false" class="featured-img" src="../assets/DVSA%20instructor.png"/>
+        </template>
+      </Card>
+    </div>
   </div>
+
+
+
 
 </template>
 
@@ -70,7 +71,7 @@ export default {
   display:flex;
   flex-direction: column;
   width:100%;
-  min-height: 90vh;
+  min-height: 100vh;
   margin:0px;
   padding:0px;
 }
@@ -114,7 +115,6 @@ export default {
   object-fit:cover;
   background-color: var(--p-blue-900);
   border-radius: 18% 82% 18% 82% / 100% 0% 100% 0%  ;
-  box-shadow: 0 0 3px 0 black;
   z-index: 0;
 }
 .background-img{
@@ -137,6 +137,7 @@ export default {
   height:60vh;
   margin:0px;
   padding:0px;
+  box-shadow: 0 0 3px 0 var(--p-background-alt);
 }
 
 h1{
@@ -176,10 +177,14 @@ h1{
     z-index: 1;
   }
   .title h1{
-    font-size:10px;
+    font-size:14px;
+  }
+  .title {
+
+    margin: 128px 24px 128px 24px;
   }
   .logo{
-    width:8rem;
+    width:10rem;
   }
 }
 </style>

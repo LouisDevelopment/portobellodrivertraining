@@ -61,6 +61,7 @@ const portobello = definePreset(Aura, {
             light: {
                 background: '{sky.200}',
                 backgroundAlt: '{sky.300}',
+                header: '{sky.700}',
                 vibrance: '100%',
                 surface: {
                     0: '#ffffff',
@@ -81,6 +82,7 @@ const portobello = definePreset(Aura, {
             dark: {
                 background: '{slate.700}',
                 backgroundAlt: '{slate.900}',
+                header: '{slate.700}',
                 vibrance: '40%',
                 surface: {
                     0: '#ffffff',
