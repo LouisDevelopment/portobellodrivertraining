@@ -1,8 +1,13 @@
 <template>
   <div class="home">
     <div class="splashpage">
-      <img class='logo' aria-label="portobello driver training logo" src="../assets/PortobelloDriverTraining.png"/>
-      <h2>Professional and affordable driving lessons in Edinburgh</h2>
+      <img draggable="false" class="background-img" src="../assets/SplashImage1.png"/>
+          <img draggable="false" class='logo' aria-label="portobello driver training logo" src="../assets/PortobelloDriverTraining.png"/>
+      <Card class="logo-text">
+        <template #content>
+          <h2>Professional and affordable driving lessons in Edinburgh</h2>
+        </template>
+      </Card>
     </div>
     <div class="content">
       <div class="inline">
@@ -38,20 +43,47 @@ export default {
 .home{
   display:flex;
   flex-direction: column;
+  width:100%;
+  margin:0px;
+  padding:0px;
 }
 
 .logo{
-  width:30%;
+  width:15rem;
+  background-color: var(--p-card-background);
+  border-radius: 50% 50% 0 0;
   height:auto;
+  z-index: 900;
+}
+
+.logo-text{
+  margin-top:-32px;
+  border-radius: 64px;
+}
+
+.background-img{
+  position:absolute;
+  left:0px;
+  top:0px;
+  margin:0px;
+  padding:0px;
+  width:100%;
+  height:67vh;
+  object-fit:cover;
+  filter: saturate(20%);
+  box-shadow: 0 0 10px 0 var(--p-surface-800);
+  z-index: -1;
 }
 
 .splashpage{
-  margin: 0 auto;
   display:flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width:100%;
   height:100vh;
+  margin:0px;
+  padding:0px;
 }
 .content{
   display:flex;
