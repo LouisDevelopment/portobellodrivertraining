@@ -22,6 +22,10 @@ export default {
     setDark: function(dark){
       this.dark = dark
     }
+  },
+  mounted(){
+    if(localStorage.getItem('dark')==='true')
+      this.dark = true;
   }
 }
 </script>

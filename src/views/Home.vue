@@ -19,12 +19,12 @@
       <div class="feature">
         <img draggable="false" class="featured-img default-img" src="../assets/DVSA%20instructor.png"/>
         <div class="feature-right">
-          <h1>Fully Certified Instructor</h1>
+          <h1>Fully Certified Instruction</h1>
           <p>As an approved driving instructor of over X years, with hundreds of passed pupils, you can be certain you're in good hands.</p>
         </div>
 
       </div>
-      <div class="feature">
+      <div class="feature feature-flipped">
         <img draggable="false" class="featured-img custom-img" src="../assets/Gearbox.png"/>
         <div class="feature-right">
           <h1>Manual Lessons</h1>
@@ -41,7 +41,7 @@
         </div>
 
       </div>
-      <div class="feature">
+      <div class="feature feature-flipped">
         <img draggable="false" class="featured-img custom-img" src="../assets/kindness.png"/>
         <div class="feature-right">
           <h1>Friendly & Patient</h1>
@@ -72,21 +72,25 @@ export default {
   },
   methods: {
     getLogoSource(){
-      console.log(this.darkMode)
+      console.log("changing " + this.darkMode)
       if(this.darkMode){
         this.logo= logoDark;
-      }else {
+      } else {
         this.logo = logoDefault;
       }
     }
   },
   watch: {
     darkMode: function(){
+      console.log("bbb " + this.darkMode);
       this.getLogoSource();
     }
   },
   mounted(){
-    this.getLogoSource();
+    if(localStorage.getItem('dark') === 'true'){
+      console.log(localStorage.getItem('dark'))
+      this.logo = logoDark;
+    }
   }
 }
 </script>
@@ -103,7 +107,7 @@ export default {
 
 .custom-img{
   height:7.3rem;
-  margin-top:0.7rem;
+  margin:0.7rem 0.7rem 0 0.7rem;
   border-radius: 50%;
   box-shadow: 0px 0px 0px 2px white;
 }
@@ -117,7 +121,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width:20%;
-  margin: 0 4%;
+  margin: 16px 4%;
 }
 
 .logo{
@@ -195,6 +199,10 @@ h1{
     align-items: center;
     width:80%;
     flex-direction: row;
+  }
+
+  .feature-flipped{
+    flex-direction: row-reverse;
   }
 
   logo-text{
