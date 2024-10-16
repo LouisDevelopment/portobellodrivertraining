@@ -84,6 +84,9 @@ export default {
     darkMode: function(){
       this.getLogoSource();
     }
+  },
+  mounted(){
+    this.getLogoSource();
   }
 }
 </script>
