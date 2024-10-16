@@ -9,9 +9,24 @@ import Button from "primevue/button";
 import Menubar from "primevue/menubar";
 import ToggleSwitch from 'primevue/toggleswitch';
 import Card from 'primevue/card';
+import Carousel from 'primevue/carousel';
 
 const portobello = definePreset(Aura, {
     components: {
+        carousel:{
+            colorScheme:{
+                dark: {
+                    indicator: {
+                        background: '{slate.700}'
+                    }
+                },
+                light: {
+                    indicator: {
+                        background: '{sky.300}'
+                    }
+                }
+            }
+        },
         card: {
             colorScheme: {
                 light: {
@@ -115,6 +130,7 @@ app.use(PrimeVue, {
 })
 app.component('Button', Button);
 app.component('Card', Card);
+app.component('Carousel', Carousel);
 app.component('Menubar', Menubar);
 app.component('ToggleSwitch', ToggleSwitch);
 app.mount('#app');

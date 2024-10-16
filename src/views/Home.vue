@@ -50,6 +50,34 @@
 
       </div>
     </div>
+    <Card class="review-card">
+      <template #content>
+        <Carousel :value="reviewData" circular :autoplayInterval="8000" :numVisible="1" :numScroll="3">
+          <template #item="slotProps">
+            <div v-if="slotProps.data.text">
+              <div style="margin-bottom: 12px">{{ slotProps.data.name }}</div>
+
+              <div style="margin-bottom: 12px; color:gold; font-size: 24px">
+              <span v-for="i in slotProps.data.stars">★</span>
+              <span v-for="i in (5-slotProps.data.stars)">☆</span>
+              </div>
+
+              <div style="margin-bottom: 12px">{{ slotProps.data.text }}</div>
+            </div>
+            <div v-else style="display:flex; align-items: center; justify-content:center; flex-direction: column">
+              <div style="margin-bottom: 12px">{{ slotProps.data.name }}</div>
+
+              <div style="margin-bottom: 12px; color:gold; font-size: 64px">
+                <span v-for="i in slotProps.data.stars">★</span>
+                <span v-for="i in (5-slotProps.data.stars)">☆</span>
+              </div>
+            </div>
+          </template>
+        </Carousel>
+      </template>
+    </Card>
+    <p>Reviews from <a target="_blank" href="https://www.google.co.uk/maps/place/Portobello+Driver+Training/@55.9362305,-3.1112234,17z/data=!4m14!1m7!3m6!1s0x6832dde697c2e0db:0x5e7309efe5481ce3!2sPortobello+Driver+Training!8m2!3d55.9362305!4d-3.1112234!16s%2Fg%2F11shc4hmvh!3m5!1s0x6832dde697c2e0db:0x5e7309efe5481ce3!8m2!3d55.9362305!4d-3.1112234!16s%2Fg%2F11shc4hmvh?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D">Google Maps</a></p>
+
   </div>
 
 
@@ -63,7 +91,8 @@ import logoDark from '../assets/PortobelloDriverTrainingWhite.png';
 export default {
   name: "Home",
   props: {
-    darkMode: false
+    darkMode: false,
+    reviewData: Array
   },
   data(){
     return{
@@ -78,7 +107,7 @@ export default {
       } else {
         this.logo = logoDefault;
       }
-    }
+    },
   },
   watch: {
     darkMode: function(){
@@ -98,6 +127,7 @@ export default {
 <style scoped>
 .home{
   display:flex;
+  align-items: center;
   flex-direction: column;
   width:100%;
   min-height: 100vh;
@@ -130,6 +160,14 @@ export default {
   border-radius: 50% 50% 0 0;
   height:auto;
   z-index: 900;
+}
+
+.review-card{
+  width: 50%;
+  display: flex;
+  margin-top:32px;
+  justify-content: center;
+  align-items: center;
 }
 
 .title{
@@ -234,6 +272,9 @@ h1{
   }
   .logo{
     width:10rem;
+  }
+  .review-card{
+    width:75%;
   }
 }
 </style>
