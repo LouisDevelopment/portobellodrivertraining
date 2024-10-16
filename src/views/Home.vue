@@ -55,7 +55,10 @@
         <Carousel :value="reviewData" circular :autoplayInterval="8000" :numVisible="1" :numScroll="3">
           <template #item="slotProps">
             <div v-if="slotProps.data.text">
-              <div style="margin-bottom: 12px">{{ slotProps.data.name }}</div>
+              <div style="margin-bottom: 12px; display: inline">
+                <div style="text-align:center">{{ slotProps.data.name }}</div>
+                <div style="text-align:right; margin-top:-21px">{{slotProps.data.date}}</div>
+              </div>
 
               <div style="margin-bottom: 12px; color:gold; font-size: 24px">
               <span v-for="i in slotProps.data.stars">★</span>
@@ -64,9 +67,11 @@
 
               <div style="margin-bottom: 12px">{{ slotProps.data.text }}</div>
             </div>
-            <div v-else style="display:flex; align-items: center; justify-content:center; flex-direction: column">
-              <div style="margin-bottom: 12px">{{ slotProps.data.name }}</div>
-
+            <div v-else>
+              <div style="margin-bottom: 12px; display: inline">
+                <div style="text-align:center">{{ slotProps.data.name }}</div>
+                <div style="text-align:right; margin-top:-21px">{{slotProps.data.date}}</div>
+              </div>
               <div style="margin-bottom: 12px; color:gold; font-size: 64px">
                 <span v-for="i in slotProps.data.stars">★</span>
                 <span v-for="i in (5-slotProps.data.stars)">☆</span>
