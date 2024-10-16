@@ -31,7 +31,7 @@ export default {
       this.dark = true;
 
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=${config.apiKey}`;
+    script.src = `https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAYefAU2nogrtKI6GCGzmj1RKMHEcC67_A`;
     script.async = true;
     script.defer = true;
 
