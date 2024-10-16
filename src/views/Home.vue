@@ -19,7 +19,7 @@
       <div class="feature">
         <img draggable="false" class="featured-img default-img" src="../assets/DVSA%20instructor.png"/>
         <div class="feature-right">
-          <h1>Fully Certified Instruction</h1>
+          <h1>Fully Certified Instructor</h1>
           <p>As an approved driving instructor of over X years, with hundreds of passed pupils, you can be certain you're in good hands.</p>
         </div>
 
