@@ -52,6 +52,7 @@
     </div>
     <Card class="review-card">
       <template #content>
+        <div style="display:block">
         <Carousel style="width:100%" :value="reviewData" circular :autoplayInterval="8000" :numVisible="1" :numScroll="3">
           <template #item="slotProps">
             <div v-if="slotProps.data.text">
@@ -79,6 +80,7 @@
             </div>
           </template>
         </Carousel>
+          </div>
       </template>
     </Card>
     <p>Reviews from <a target="_blank" href="https://www.google.co.uk/maps/place/Portobello+Driver+Training/@55.9362305,-3.1112234,17z/data=!4m14!1m7!3m6!1s0x6832dde697c2e0db:0x5e7309efe5481ce3!2sPortobello+Driver+Training!8m2!3d55.9362305!4d-3.1112234!16s%2Fg%2F11shc4hmvh!3m5!1s0x6832dde697c2e0db:0x5e7309efe5481ce3!8m2!3d55.9362305!4d-3.1112234!16s%2Fg%2F11shc4hmvh?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D">Google Maps</a></p>
