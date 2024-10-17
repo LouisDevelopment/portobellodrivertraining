@@ -9,7 +9,7 @@
             <h1>Professional and affordable driving lessons in Edinburgh</h1>
           </template>
         </Card>
-        <Button @click="window.open('https://goroadie.com/e/8b13c', '_blank');" style="margin-top:16px; border-radius: 32px" label="Book Lessons Now"></Button>
+        <a href="https://goroadie.com/e/8b13c" target="_blank"><Button style="margin-top:16px; border-radius: 32px" label="Book Lessons Now"></Button></a>
       </div>
       <div class="background-img-container">
         <img draggable="false" class="background-img" src="../assets/SplashImage1.png"/>
@@ -50,14 +50,13 @@
 
       </div>
     </div>
-    <Card class="review-card">
-      <template #content>
+    <div class="review-card">
         <Carousel :value="reviewData" circular :autoplayInterval="8000" :numVisible="1" :numScroll="3">
           <template #item="slotProps">
             <div v-if="slotProps.data.text">
               <div style="margin-bottom: 12px; display: inline">
                 <div style="text-align:center">{{ slotProps.data.name }}</div>
-                <div style="text-align:right; margin-top:-21px">{{slotProps.data.date}}</div>
+                <div style="text-align:right;margin-top:-16px">{{slotProps.data.date}}</div>
               </div>
 
               <div style="margin-bottom: 12px; color:gold; font-size: 24px">
@@ -70,7 +69,7 @@
             <div v-else>
               <div style="margin-bottom: 12px; display: inline">
                 <div style="text-align:center">{{ slotProps.data.name }}</div>
-                <div style="text-align:right; margin-top:-21px">{{slotProps.data.date}}</div>
+                <div style="text-align:right; margin-top:-16px">{{slotProps.data.date}}</div>
               </div>
               <div style="margin-bottom: 12px; color:gold; font-size: 64px">
                 <span v-for="i in slotProps.data.stars">★</span>
@@ -79,8 +78,7 @@
             </div>
           </template>
         </Carousel>
-      </template>
-    </Card>
+     </div>
     <p>Reviews from <a target="_blank" href="https://www.google.co.uk/maps/place/Portobello+Driver+Training/@55.9362305,-3.1112234,17z/data=!4m14!1m7!3m6!1s0x6832dde697c2e0db:0x5e7309efe5481ce3!2sPortobello+Driver+Training!8m2!3d55.9362305!4d-3.1112234!16s%2Fg%2F11shc4hmvh!3m5!1s0x6832dde697c2e0db:0x5e7309efe5481ce3!8m2!3d55.9362305!4d-3.1112234!16s%2Fg%2F11shc4hmvh?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D">Google Maps</a></p>
 
   </div>
@@ -108,9 +106,9 @@ export default {
     getLogoSource(){
       console.log("changing " + this.darkMode)
       if(this.darkMode){
-        this.logo= logoDark;
-      } else {
         this.logo = logoDefault;
+      } else {
+        this.logo= logoDark;
       }
     },
   },
@@ -121,8 +119,7 @@ export default {
     }
   },
   mounted(){
-    if(localStorage.getItem('dark') === 'true'){
-      console.log(localStorage.getItem('dark'))
+    if(localStorage.getItem('dark') === 'false'){
       this.logo = logoDark;
     }
   }
@@ -168,8 +165,11 @@ export default {
 }
 
 .review-card{
+  background-color: var(--p-card-background);
+  padding: 2rem 0 2rem 0;
+  border-radius: 10px;
+  margin-bottom: 1rem;
   width: 50%;
-  display: flex;
   margin-top:32px;
   justify-content: center;
   align-items: center;
@@ -279,7 +279,7 @@ h1{
     width:10rem;
   }
   .review-card{
-    width:75%;
+    width:95%;
   }
 }
 </style>
