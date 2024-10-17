@@ -167,7 +167,7 @@ export default {
 
 .review-card{
   background-color: var(--p-card-background);
-  padding: 2rem;
+  padding: 2rem 0 2rem 0;
   border-radius: 10px;
   margin-bottom: 1rem;
   width: 50%;
@@ -280,7 +280,7 @@ h1{
     width:10rem;
   }
   .review-card{
-    width:75%;
+    width:95%;
   }
 }
 </style>
