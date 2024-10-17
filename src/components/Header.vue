@@ -50,15 +50,15 @@ export default {
       } else {
         document.documentElement.classList.remove('dark-mode'); // Remove dark mode class
       }
-      this.$emit('darkMode', this.checked)
-      localStorage.setItem('dark', this.checked); // Save preference
+      this.$emit('darkMode', this.checked===false)
+      localStorage.setItem('dark', this.checked===false); // Save preference
     }
   },
   mounted() {
     const savedTheme = localStorage.getItem('dark');
     this.$emit('darkMode', savedTheme);
     // Convert the saved string back to a boolean
-    this.checked = savedTheme === 'true'; // Set `checked` to true or false based on stored value
+    this.checked = !(savedTheme === 'true'); // Set `checked` to true or false based on stored value
   }
 }
 </script>

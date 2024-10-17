@@ -106,9 +106,9 @@ export default {
     getLogoSource(){
       console.log("changing " + this.darkMode)
       if(this.darkMode){
-        this.logo= logoDark;
-      } else {
         this.logo = logoDefault;
+      } else {
+        this.logo= logoDark;
       }
     },
   },
@@ -119,8 +119,7 @@ export default {
     }
   },
   mounted(){
-    if(localStorage.getItem('dark') === 'true'){
-      console.log(localStorage.getItem('dark'))
+    if(localStorage.getItem('dark') === 'false'){
       this.logo = logoDark;
     }
   }
