@@ -33,4 +33,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages  # The branch you want to deploy to
-          cname: www.yourcustomdomain.com  # Add your custom domain here
+          cname: portobellodrivertraining.com  # Add your custom domain here
