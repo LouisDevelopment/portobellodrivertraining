@@ -2,7 +2,7 @@
   <div class="home">
     <div class="splashpage">
       <div class="title">
-        <img draggable="false" class='logo' aria-label="portobello driver training logo" :src="logo"/>
+        <img draggable="false" class='logo' aria-label="portobello driver training logo" :src="logo" alt="Portobello Driver Training, Steering you to success"/>
 
         <Card class="logo-text">
           <template #content>
@@ -17,15 +17,15 @@
     </div>
     <div class="inline">
       <div class="feature">
-        <img draggable="false" class="featured-img default-img" src="../assets/DVSA%20instructor.png"/>
+        <img draggable="false" class="featured-img default-img" src="../assets/DVSA%20instructor.png" alt="Certified Instructor Icon"/>
         <div class="feature-right">
           <h1>Fully Certified Instruction</h1>
-          <p>As an approved driving instructor in Edinburgh since 2015 and with over two hundred passed pupils, you can be certain you're in good hands.</p>
+          <p>As an approved driving instructor (ADI) in Edinburgh since 2015 and with over two hundred passed pupils, you can be certain you're in good hands.</p>
         </div>
 
       </div>
       <div class="feature feature-flipped">
-        <img draggable="false" class="featured-img custom-img" src="../assets/Gearbox.png"/>
+        <img draggable="false" class="featured-img custom-img" src="../assets/Gearbox.png" alt="Manual Gearbox Icon"/>
         <div class="feature-right">
           <h1>Manual Lessons</h1>
           <p>With Portobello Driver Training you'll be driving a manual car, picking up all the skills
@@ -34,7 +34,7 @@
 
       </div>
       <div class="feature">
-        <img draggable="false" class="featured-img custom-img" src="../assets/currency.png"/>
+        <img draggable="false" class="featured-img custom-img" src="../assets/currency.png" alt="Money Icon"/>
         <div class="feature-right">
           <h1>Competitive Pricing</h1>
           <p>With {{ settings.learnerLength }} minute lessons costing £{{ settings.learnerPrice }} (£{{roundedPrice}} per hour) for both beginner and refresher lessons, Portobello Driver Training is priced below the average for the Edinburgh Area.</p>
@@ -42,7 +42,7 @@
 
       </div>
       <div class="feature feature-flipped">
-        <img draggable="false" class="featured-img custom-img" src="../assets/kindness.png"/>
+        <img draggable="false" class="featured-img custom-img" src="../assets/kindness.png" alt="Kindness Icon"/>
         <div class="feature-right">
           <h1>Friendly & Patient</h1>
           <p>No one wants to be treated unfairly, especially when driving. Portobello Driver Training will treat you with the respect and patience that you deserve.</p>

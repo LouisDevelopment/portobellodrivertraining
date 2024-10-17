@@ -2,7 +2,7 @@
 <div class="header">
   <div class="left">
     <img @mouseover="logo=logoHover"
-         @mouseleave="logo=defaultLogo"  @click="this.$router.push({name: 'Home'});" class="logo" :src="logo"/>
+         @mouseleave="logo=defaultLogo"  @click="this.$router.push({name: 'Home'});" class="logo" :src="logo" alt="Logo"/>
     <Button class="header-button" text :label="items[1].label" @click="items[1].command"/>
   </div>
   <div class="right">
