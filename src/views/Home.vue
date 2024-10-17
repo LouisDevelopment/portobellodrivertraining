@@ -65,7 +65,7 @@
               <span v-for="i in (5-slotProps.data.stars)">☆</span>
               </div>
 
-              <div style="margin-bottom: 12px">{{ slotProps.data.text }}</div>
+              <div style="margin-bottom: 12px; width:90%">{{ slotProps.data.text }}</div>
             </div>
             <div v-else>
               <div style="margin-bottom: 12px; display: inline">
