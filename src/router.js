@@ -1,5 +1,5 @@
 // src/router.js
-import { createRouter, createWebHashHistory } from 'vue-router'; // Use createWebHashHistory instead
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'; // Use createWebHashHistory instead
 import Home from './views/Home.vue';
 import Pricing from './views/Pricing.vue';
 
@@ -19,7 +19,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHashHistory("/portobellodrivertraining/"), // Change this to use hash history
+    history: createWebHistory("/portobellodrivertraining/"), // Change this to use hash history
     routes,
 });
 
