@@ -11,6 +11,11 @@ import ToggleSwitch from 'primevue/toggleswitch';
 import Card from 'primevue/card';
 import Carousel from 'primevue/carousel';
 import Galleria from 'primevue/galleria';
+import Accordion from 'primevue/accordion';
+import AccordionPanel from 'primevue/accordionpanel';
+import AccordionHeader from 'primevue/accordionheader';
+import AccordionContent from 'primevue/accordioncontent';
+
 const portobello = definePreset(Aura, {
     components: {
         carousel:{
@@ -133,5 +138,9 @@ app.component('Card', Card);
 app.component('Carousel', Carousel);
 app.component('Galleria', Galleria);
 app.component('Menubar', Menubar);
+app.component('Accordion', Accordion);
+app.component('AccordionPanel', AccordionPanel);
+app.component('AccordionHeader', AccordionHeader);
+app.component('AccordionContent', AccordionContent);
 app.component('ToggleSwitch', ToggleSwitch);
 app.mount('#app');

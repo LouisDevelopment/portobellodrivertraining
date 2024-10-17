@@ -37,7 +37,7 @@
         <img draggable="false" class="featured-img custom-img" src="../assets/currency.png"/>
         <div class="feature-right">
           <h1>Competitive Pricing</h1>
-          <p>With 90 minute lessons costing £65 (£43 per hour) for both beginner and refresher lessons, Portobello Driver Training is priced below the average for the Edinburgh Area.</p>
+          <p>With {{ settings.learnerLength }} minute lessons costing £{{ settings.learnerPrice }} (£{{roundedPrice}} per hour) for both beginner and refresher lessons, Portobello Driver Training is priced below the average for the Edinburgh Area.</p>
         </div>
 
       </div>
@@ -74,6 +74,8 @@
       </template>
     </Card>
 
+
+
     <div class="review-card">
         <Carousel :value="reviewData" circular :autoplayInterval="8000" :numVisible="1" :numScroll="3">
           <template #item="slotProps">
@@ -105,6 +107,7 @@
      </div>
     <p>Reviews from <a target="_blank" href="https://www.google.co.uk/maps/place/Portobello+Driver+Training/@55.9362305,-3.1112234,17z/data=!4m14!1m7!3m6!1s0x6832dde697c2e0db:0x5e7309efe5481ce3!2sPortobello+Driver+Training!8m2!3d55.9362305!4d-3.1112234!16s%2Fg%2F11shc4hmvh!3m5!1s0x6832dde697c2e0db:0x5e7309efe5481ce3!8m2!3d55.9362305!4d-3.1112234!16s%2Fg%2F11shc4hmvh?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D">Google Maps</a></p>
 
+    <TermsAndConditions/>
   </div>
 
 
@@ -117,11 +120,18 @@ import logoDefault from '../assets/PortobelloDriverTraining.png';
 import logoDark from '../assets/PortobelloDriverTrainingWhite.png';
 import goRoadie1 from '../assets/goroadie1.png';
 import goRoadie2 from '../assets/goroadie2.png';
+import TermsAndConditions from "../components/TermsAndConditions.vue";
+
+import PriceSettings from '../CustomerFriendlySettings.js'
+
 export default {
   name: "Home",
   props: {
     darkMode: false,
     reviewData: Array,
+  },
+  components: {
+    TermsAndConditions
   },
   data(){
     return{
@@ -129,7 +139,8 @@ export default {
       goRoadieImageLinks: [
         { url: goRoadie1},
         { url: goRoadie2},
-      ]
+      ],
+      settings: PriceSettings
     }
   },
   methods: {
@@ -146,6 +157,11 @@ export default {
     darkMode: function(){
       console.log("bbb " + this.darkMode);
       this.getLogoSource();
+    }
+  },
+  computed: {
+    roundedPrice(){
+      return Math.round(60/this.settings.learnerLength * this.settings.learnerPrice);
     }
   },
   mounted(){
