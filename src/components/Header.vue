@@ -3,8 +3,6 @@
   <div class="left">
     <img @mouseover="logo=logoHover"
          @mouseleave="logo=defaultLogo"  @click="this.$router.push({name: 'Home'});" class="logo" :src="logo"/>
-    <Button
-        class="header-button" text :label="items[0].label" @click="items[0].command"/>
     <Button class="header-button" text :label="items[1].label" @click="items[1].command"/>
   </div>
   <div class="right">

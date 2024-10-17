@@ -19,7 +19,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory("/portobellodrivertraining/"), // Change this to use hash history
+    history: createWebHistory("/"), // Change this to use hash history
     routes,
 });
 
