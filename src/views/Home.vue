@@ -56,7 +56,7 @@
             <div v-if="slotProps.data.text">
               <div style="margin-bottom: 12px; display: inline">
                 <div style="text-align:center">{{ slotProps.data.name }}</div>
-                <div style="text-align:right; margin-top:-21px">{{slotProps.data.date}}</div>
+                <div style="text-align:right;margin-top:-16px">{{slotProps.data.date}}</div>
               </div>
 
               <div style="margin-bottom: 12px; color:gold; font-size: 24px">
