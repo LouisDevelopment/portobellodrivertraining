@@ -52,7 +52,7 @@
     </div>
     <Card class="review-card">
       <template #content>
-        <Carousel :value="reviewData" circular :autoplayInterval="8000" :numVisible="1" :numScroll="3">
+        <Carousel style="width:100%" :value="reviewData" circular :autoplayInterval="8000" :numVisible="1" :numScroll="3">
           <template #item="slotProps">
             <div v-if="slotProps.data.text">
               <div style="margin-bottom: 12px; display: inline">
