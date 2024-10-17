@@ -20,7 +20,7 @@
         <img draggable="false" class="featured-img default-img" src="../assets/DVSA%20instructor.png"/>
         <div class="feature-right">
           <h1>Fully Certified Instruction</h1>
-          <p>As an approved driving instructor of over X years, with hundreds of passed pupils, you can be certain you're in good hands.</p>
+          <p>As an approved driving instructor in Edinburgh since 2015 and with over two hundred passed pupils, you can be certain you're in good hands.</p>
         </div>
 
       </div>
@@ -29,7 +29,7 @@
         <div class="feature-right">
           <h1>Manual Lessons</h1>
           <p>With Portobello Driver Training you'll be driving a manual car, picking up all the skills
-            required to pass the UK driving test and get a complete Manual and Automatic car licence.</p>
+            required to pass the UK driving test and get a complete Category B (Manual & Automatic) car licence.</p>
         </div>
 
       </div>
@@ -37,7 +37,7 @@
         <img draggable="false" class="featured-img custom-img" src="../assets/currency.png"/>
         <div class="feature-right">
           <h1>Competitive Pricing</h1>
-          <p>With 90 minute lessons costing £65 (£43 per hour), Portobello Driver Training is priced below the average for the Edinburgh Area.</p>
+          <p>With 90 minute lessons costing £65 (£43 per hour) for both beginner and refresher lessons, Portobello Driver Training is priced below the average for the Edinburgh Area.</p>
         </div>
 
       </div>
@@ -50,6 +50,25 @@
 
       </div>
     </div>
+
+    <Card class="goroadie-card">
+      <template #title>GoRoadie App</template>
+      <template #content>
+        <div class="flex-horizontal">
+          <p>While some instructors still use booklets for tracking pupil's progress, we use the GoRoadie app.
+            An easy to use app for Android and iOS that lets you check in to lessons, track your progress
+            And highlight areas you'd like to work on for future lessons.
+          </p>
+          <Galleria class="goroadie-carousel" :showThumbnails="false" :showIndicators="true" :showIndicatorsOnItem="true"
+                    :circular="true" :autoPlay="true" :value="goRoadieImageLinks"  :numVisible="2" containerStyle="min-width: 340px">
+            <template #item="slotProps">
+              <img :src="slotProps.item.url" class="goroadie-img"/>
+            </template>
+          </Galleria>
+        </div>
+      </template>
+    </Card>
+
     <div class="review-card">
         <Carousel :value="reviewData" circular :autoplayInterval="8000" :numVisible="1" :numScroll="3">
           <template #item="slotProps">
@@ -91,15 +110,21 @@
 <script>
 import logoDefault from '../assets/PortobelloDriverTraining.png';
 import logoDark from '../assets/PortobelloDriverTrainingWhite.png';
+import goRoadie1 from '../assets/goroadie1.png';
+import goRoadie2 from '../assets/goroadie2.png';
 export default {
   name: "Home",
   props: {
     darkMode: false,
-    reviewData: Array
+    reviewData: Array,
   },
   data(){
     return{
-      logo: logoDefault
+      logo: logoDefault,
+      goRoadieImageLinks: [
+        { url: goRoadie1},
+        { url: goRoadie2},
+      ]
     }
   },
   methods: {
@@ -229,6 +254,22 @@ h1{
   flex-direction: row;
   justify-content: center;
 }
+
+.goroadie-card{
+  width:60%;
+  text-align: left;
+}
+
+.goroadie-img{
+  height:364px;
+}
+
+.flex-horizontal{
+  display:flex;
+  flex-direction: row;
+
+}
+
 @media (max-width: 1000px) {
   .inline {
     justify-content: center;
@@ -259,6 +300,10 @@ h1{
   .info-panel{
     margin:16px 16px;
   }
+
+  .goroadie-card{
+    width:95%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -267,6 +312,11 @@ h1{
     width:100%;
     left:0;
     z-index: 1;
+  }
+
+  .goroadie-card{
+    width:80%;
+    text-align: left;
   }
   .title h1{
     font-size:14px;
