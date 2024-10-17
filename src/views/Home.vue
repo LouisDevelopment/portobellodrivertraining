@@ -9,7 +9,7 @@
             <h1>Professional and affordable driving lessons in Edinburgh</h1>
           </template>
         </Card>
-        <Button @click="window.open('https://goroadie.com/e/8b13c', '_blank');" style="margin-top:16px; border-radius: 32px" label="Book Lessons Now"></Button>
+        <a href="https://goroadie.com/e/8b13c" target="_blank"><Button style="margin-top:16px; border-radius: 32px" label="Book Lessons Now"></Button></a>
       </div>
       <div class="background-img-container">
         <img draggable="false" class="background-img" src="../assets/SplashImage1.png"/>
