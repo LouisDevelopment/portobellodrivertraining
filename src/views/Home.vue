@@ -52,13 +52,18 @@
     </div>
 
     <Card class="goroadie-card">
-      <template #title>GoRoadie App</template>
+      <template #title></template>
       <template #content>
         <div class="flex-horizontal">
-          <p>While some instructors still use booklets for tracking pupil's progress, we use the GoRoadie app.
-            An easy to use app for Android and iOS that lets you check in to lessons, track your progress
-            And highlight areas you'd like to work on for future lessons.
-          </p>
+          <div style="display:flex; flex-direction: column; align-items: center;">
+            <a target="_blank" href="https://www.goroadie.com/guides/learners/using-goroadie-app"><img style="height:96px" src="../assets/GoRoadieLogo.png"/></a>
+            <p>While some instructors still use booklets for tracking pupil's progress, we use the GoRoadie app.
+              An easy to use app for Android and iOS that lets you check in to lessons, track your progress
+              And highlight areas you'd like to work on for future lessons.
+            </p>
+            <p>You can download the GoRoadie app by clicking the logo above, or following this link:
+              <a target="_blank" href="https://www.goroadie.com/guides/learners/using-goroadie-app">https://www.goroadie.com/guides/learners/using-goroadie-app</a></p>
+          </div>
           <Galleria class="goroadie-carousel" :showThumbnails="false" :showIndicators="true" :showIndicatorsOnItem="true"
                     :circular="true" :autoPlay="true" :value="goRoadieImageLinks"  :numVisible="2" containerStyle="min-width: 340px">
             <template #item="slotProps">
@@ -270,6 +275,34 @@ h1{
 
 }
 
+
+@media (max-width: 1200px) {
+  .background-img-container{
+    position:absolute;
+    width:100%;
+    left:0;
+    z-index: 1;
+  }
+
+  .goroadie-card{
+    width:80%;
+    text-align: left;
+  }
+  .title h1{
+    font-size:14px;
+  }
+  .title {
+
+    margin: 128px 24px 128px 24px;
+  }
+  .logo{
+    width:10rem;
+  }
+  .review-card{
+    width:95%;
+  }
+}
+
 @media (max-width: 1000px) {
   .inline {
     justify-content: center;
@@ -306,30 +339,10 @@ h1{
   }
 }
 
-@media (max-width: 1200px) {
-  .background-img-container{
-    position:absolute;
-    width:100%;
-    left:0;
-    z-index: 1;
-  }
+@media (max-width: 800px) {
 
-  .goroadie-card{
-    width:80%;
-    text-align: left;
-  }
-  .title h1{
-    font-size:14px;
-  }
-  .title {
-
-    margin: 128px 24px 128px 24px;
-  }
-  .logo{
-    width:10rem;
-  }
-  .review-card{
-    width:95%;
+  .flex-horizontal{
+    flex-direction:column;
   }
 }
 </style>
